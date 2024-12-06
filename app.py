@@ -53,11 +53,11 @@ def index():
     conexion, cursor=crear_conexion(path_database)
     # Se crea la tabla y los archivos si el archivo veterinario-Avanza-Plus.db no existe
     if inicializar_bd:
-        #crear_tabla_usuarios(conexion, cursor)
-        #anadir_usuarios(conexion, cursor)
-    #usuarios=["Fran", "Kike", "Pablo","Teo"]
-    usuarios=dame_usuarios(cursor)
-    print(usuarios)
+        crear_tabla_usuarios(conexion, cursor)
+        anadir_usuarios(conexion, cursor)
+    usuarios=["Fran", "Kike", "Pablo","Teo"]
+    #usuarios=dame_usuarios(cursor)
+    #print(usuarios)
     return render_template("index.html", usuarios=usuarios)
 
 
