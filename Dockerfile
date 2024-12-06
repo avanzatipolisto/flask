@@ -7,6 +7,7 @@ WORKDIR /app
 # copiamos nuestro proyecto a la carpta /app
 COPY . .
 # exponemos el puerto en el contenedor
-EXPOSE 3000
+EXPOSE 5000
 #ejecutamos el servidor
 CMD ["python", "app.py"]
+
