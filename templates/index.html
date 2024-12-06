@@ -1,11 +1,17 @@
-{% extends "plantilla.html" %}
-{% block title %}Home{% endblock %}
-{% block content %}
-    <h2>Escuela avznza</h2>
-    {% if usuarios==None %}
-        <p>No hay usuarios</p>
-    {% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test/title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='icon.ico') }}">
+</head>
+<body>
+    <h1>Curso avanza de Python</h1>
     {% for user in usuarios %}
         <p>{{ user }}</p>
     {% endfor %}
-{% endblock %}
+</body>
+</html>
+
